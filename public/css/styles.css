@@ -276,14 +276,6 @@ input[type="text"]{
     transition: 0.3s;
 }
 
-#send:enabled{
-    opacity: 100%;
-}
-
-#send:disabled{
-    opacity: 50%;
-}
-
 .request_box{
     display: flex;
     justify-content: flex-end;

@@ -22,15 +22,15 @@ app.get('/aiapp', async (req, res) => {
    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
    const prompt = "Briefly introduce yourself as an AI assistant and ask me to ask you anything";
    const result = await model.generateContent(prompt);
-   console.log(result.response.text());
+   // console.log(result.response.text());
    res.render('aiapp', { currentPage: '/aiapp' });
 });
 
 // Retrieves userMessage and Gemini Response for AI chat
 app.post("/aiapp", async (req,res)=> {
-   console.log("Inside app.post /aiapp...");
+   // console.log("Inside app.post /aiapp...");
    const userMessage = req.body.user_message;
-   console.log(userMessage);
+   // console.log(userMessage);
    try {
       const genAI = new GoogleGenerativeAI(process.env.API_KEY);
       const model = genAI.getGenerativeModel({model: "gemini-1.5-flash"});
@@ -52,7 +52,7 @@ app.post("/aiapp", async (req,res)=> {
 
       const result = await chat.sendMessage(userMessage);
       const response = result.response.text();
-      console.log(response);
+      // console.log(response);
       res.json({reply: response});
    }catch(error){
       console.error("Error generating content: ", error);

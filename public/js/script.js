@@ -13,9 +13,9 @@ document.querySelector("#send").addEventListener("click", sendMessage);
 // Gets a response from the Gemini API when the user sends a message
 async function sendMessage(){
     document.querySelector("#send").style.enabled = false;
-    console.log("Inside sendMesssage...");
+    // console.log("Inside sendMesssage...");
     let userMessage = document.querySelector("#userMessage").value;
-    console.log("User Message: " + userMessage);
+    // console.log("User Message: " + userMessage);
     let feedback = document.querySelector("#msgFb");
     if(userMessage != ""){
         // adds the userMessage to the chat history
@@ -25,7 +25,7 @@ async function sendMessage(){
         feedback.innerHTML = "";
         // Retrieves a response from the API
         const response = await getResponse(userMessage);
-        console.log("API Response: " + response.reply);
+        // console.log("API Response: " + response.reply);
         // display api response in chat history
         addApiResponse(response.reply);
     }else{
@@ -38,8 +38,8 @@ async function sendMessage(){
 
 // Handles the frontend API endpoint interaction with the backend
 async function getResponse(userMessage){
-    console.log("Inside getResponse...");
-    console.log("Sending Message: " + userMessage);
+    // console.log("Inside getResponse...");
+    // console.log("Sending Message: " + userMessage);
     try{
         response = await fetch("/aiapp",{
             method: "POST",
@@ -57,7 +57,7 @@ async function getResponse(userMessage){
         }
         // Successfully received a response
         response = response.json();
-        console.log("client received: " + response);
+        // console.log("client received: " + response);
         return response;
     
     // There was another error retrieveing a response
@@ -67,13 +67,13 @@ async function getResponse(userMessage){
     };
     console.log("Problem getting response.");
     response = "An error occured.";
-    console.log("client received: " + response);
+    // console.log("client received: " + response);
     return response;
 }
 
 // adds the user message to the chat history
 function addUserMsg(message){
-    console.log("adding user message...");
+    // console.log("adding user message...");
     let chatHistory = document.querySelector("#chatHistory");
     chatHistory.innerHTML += `<div class="request_box"><div class="request"> ${message} </div></div>`;
     chatHistory.scrollTop = chatHistory.scrollHeight;
@@ -81,7 +81,7 @@ function addUserMsg(message){
 
 // adds the API response to the chat history
 function addApiResponse(message){
-    console.log("adding response message...");
+    // console.log("adding response message...");
     let chatHistory = document.querySelector("#chatHistory");
     chatHistory.innerHTML += `<div class="response_box"> <img id="gemini_logo" src="/img/gemini_icon.png">
     <div class="response">${message}</div> </div>`;

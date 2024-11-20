@@ -52,7 +52,7 @@ app.post("/aiapp", async (req,res)=> {
             maxOutputTokens: 100,
          },
       });
-      
+
       const result = await chat.sendMessage(userMessage);
       const response = result.response.text();
       console.log(response);
@@ -62,29 +62,6 @@ app.post("/aiapp", async (req,res)=> {
       res.status(500).json({error: "Failed to generate content"});
    }
 });
-
-/* Root route */
-// app.get('/', async (req, res) => {
-//     let apiKey = "7756a1e81f817c186cf57294e1c19b37b49c54b8f34e7c499ee0ce5cd86cd16e";
-//     let url = `https://api.unsplash.com/photos/random/?client_id=${apiKey}&featured=true&query=solar-system`;
-//     let response = await fetch(url);
-//     let data = await response.json();
-//     let randomImage = data.urls.full;
-//     res.render("index",{"image":randomImage});
-//  });
-
- /* NASA Picture of the Day */
- app.get('/nasa', async (req, res) => {
-    const today = new Date(Date.now()).toISOString().substring(0,10);
-	let url = `https://api.nasa.gov/planetary/apod?api_key=9mUzIkhlZCZaOoMfspg7jMmwZCZ4LiRHtkgkambD&date=${today}`;
-    let response = await fetch(url);
-    let data = await response.json();
-    let date = data.date;
-    let title = data.title;
-    let pod = data.url;
-    let explanation = data.explanation;
-    res.render("nasa",{"date":date,"title":title,"pod":pod,"explanation":explanation});
- });
 
  /* Benefits route */
 app.get('/benefits', (req, res) => {

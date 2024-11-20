@@ -61,11 +61,11 @@ async function getResponse(userMessage){
 // adds the user message to the chat history
 function addUserMsg(message){
     console.log("adding user message...");
-    document.querySelector("#chatHistory").innerHTML += `<div class="request"> ${message} </div>`;
+    document.querySelector("#chatHistory").innerHTML += `<div><span class="request"> ${message} </span></div>`;
 }
 
 // adds the API response to the chat history
 function addApiResponse(message){
     console.log("adding response message...");
-    document.querySelector("#chatHistory").innerHTML += `<div class="response"> ${message} </div>`;
+    document.querySelector("#chatHistory").innerHTML += `<div><span class="request"> ${message} </span></div>`;
 }

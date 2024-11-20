@@ -216,7 +216,6 @@ td {
 #chatbox{
     display:flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     margin: auto;
     background-color:#FDFFF5;
@@ -263,10 +262,12 @@ input[type="text"]{
     margin: 5px;
     font-family: "Josefin Sans", sans-serif;
     font-weight: 300;
+    max-width: 70%;
 }
 
 .response{
     display: inline;
+    justify-content: left;
     text-align: left;
     border: #003049 2px solid;
     border-radius: 7px;
@@ -276,5 +277,6 @@ input[type="text"]{
     margin: 5px;
     font-family: "Josefin Sans", sans-serif;
     font-weight: 300;
+    max-width: 70%;
 }
 

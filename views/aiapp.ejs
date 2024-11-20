@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <%- include('partials/head.ejs') %>
+    <body>
+        <%- include('partials/nav.ejs') %>
+        
+
+        <div id="chatbox">
+            <div id="chatHistory">
+                <div>Chat history...</div>
+            </div>
+            <div id="sendMessage" class="container">
+                <input id="userMessage" type="text" placeholder="Message Google Gemini">
+                <button id="send"> Send </button>
+            </div class="container">
+            <div id="msgFb"></div>
+        </div>
+
+
+        <%- include('partials/footer.ejs') %>
+        <script src="js/script.js"></script>
+    </body>
+
+</html>

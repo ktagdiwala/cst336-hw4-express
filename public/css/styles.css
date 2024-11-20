@@ -1,0 +1,280 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    min-height: 100vh;
+    position: relative;
+    background-color: #003d54;
+    color: #FDFFF5;
+    font-family: "Josefin Slab", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+}
+
+hr {
+    width: 100%;
+    color: #54C7C6;
+}
+
+header, main, nav, footer {
+    text-align: center;
+}
+
+nav {
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+
+nav a { /* links within "nav" container */
+    padding: 15px;
+    padding-bottom: 4px;
+    font-size: 1.8em;
+    text-decoration: none;  /* removes underline*/
+    color: white;         /* by default, links are white */
+}
+
+nav a:hover {   /* pseudo class */
+    border: #0281B1 solid;
+    background-color: #0281B1;
+    transition: .5s;    /* transition effect */
+}
+
+.current_page {
+    border: 2px #54C7C6 solid;
+    color: #54C7C6;
+    font-weight: 700;
+}
+
+footer {
+    margin-top: auto;
+    bottom: 0;
+    width: 100%;
+    text-align: start;
+    color: #a1e9e7;
+    font-weight: 400;
+}
+
+#footer-content { /* displays image and text side-by-side */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0px;
+}
+
+.centered {
+    text-align: center;
+}
+
+#csumb-logo {
+    width: 70px;
+    height: auto;
+    border: 2px #a1e9e7 solid;
+    border-radius: 100%;
+}
+
+h1 {
+    font-family: "Josefin Slab", serif;
+    font-weight: 700;
+    font-size: 3.5em;
+    margin-bottom: 0px;
+}
+
+h2 {
+    color: #BAFDDA;
+    font-family: "Josefin Slab", serif;
+    font-weight: 700;
+    font-size: 2.4em;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 0px;
+}
+
+h3 {
+    color: #BDFCC1;
+    font-family: "Josefin Slab", serif;
+    font-weight: 600;
+    font-size: 2em;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+a {
+    color: #0593c6;
+}
+
+a:active {
+    color: #BAFDDA;
+}
+
+.text_and_img {
+    display: flex;
+    width: 70%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    padding: 10px;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: auto;
+    justify-content: center;
+    align-self: center;
+    padding: 10px;
+}
+
+.only_img {
+    align-self: center;
+}
+
+details {
+    text-align: center;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.article_img {
+    height:300px;
+    width: auto;
+    border: 4px #54C7C6 solid;
+}
+
+img {
+    margin: 10px;
+}
+
+p {
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 350;
+    font-style: normal;
+    font-size: 1.3em;
+    padding: 0px 20px;
+    margin: 10px 0px;
+}
+
+.list {
+    width: 70%;
+    align-self: center;
+}
+
+li > ul {
+    font-size: 1.3em;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 350;
+}
+
+
+/* Used to style only the numbers in the ordered list */
+ol.numbered { 
+    list-style: none; /* Remove default numbering */ 
+    counter-reset: list-counter; /* Reset the custom counter */ 
+} 
+
+ol.numbered > li { 
+    counter-increment: list-counter; /* Increment the counter */ 
+    position: relative; /* Enable absolute positioning of the counter */ 
+    padding-left: 1.5em; /* Add space for the counter  */
+    padding-bottom: 20px;
+}
+
+ol.numbered > li::before {
+    content: counter(list-counter) ". "; /* Add custom numbering */ 
+    position: absolute; /* Position it absolutely */ 
+    left: 0; /* Align it to the left */ 
+    font-size: 2em;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 350;
+    color: #BAFDDA;
+}
+
+table, tr {
+    width: 70%;
+    align-self: center;
+}
+
+td {
+    text-align: center;
+}
+
+.hover_color:hover {
+    background-color: #0281B1;
+    transition: 0.7s;
+}
+
+#chatbox{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background-color:#FDFFF5;
+    color:#003d54;
+}
+
+#chatHistory {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 50vh;
+    min-height: 70vh;
+    max-height: 70vh;
+    padding: 20px;
+    margin: auto;
+    Overflow-y: scroll;
+}
+
+#sendMessage, #msgFb{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    padding: 5px;
+    margin: auto;
+}
+
+input[type="text"]{
+    border: #003049 2px solid;
+    border-radius: 7px;
+    background-color:#003d54;
+    color:#FDFFF5;
+    text-align: left;
+}
+
+.request{
+    display: inline;
+    text-align: right;
+    border: #003049 2px solid;
+    border-radius: 7px;
+    background-color:#003d54;
+    color:#FDFFF5;
+    padding: 5px;
+    margin: 5px;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 300;
+}
+
+.response{
+    display: inline;
+    text-align: left;
+    border: #003049 2px solid;
+    border-radius: 7px;
+    background-color:#FDFFF5;
+    color:#003049;
+    padding: 5px;
+    margin: 5px;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 300;
+}
+

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <%- include('partials/head.ejs') %>
+    <body>
+        <%- include('partials/nav.ejs') %>
+        
+        <article class = "text">
+            <h2>The Data Science Process</h2>
+            <p>
+                The data science process is typically initiated by a business problem. 
+                A data scientist will work with business stakeholders to understand 
+                what the business needs. Upon identifying the problem, the data 
+                scientist may solve it using the 
+                <abbr title="Obtain, Scrub, Explore, Model, Interpret results">OSEMN</abbr> 
+                data science process:
+            </p>
+        </article>
+        <div class = "only_img">
+            <img src="img/osemn.png" alt = "OSEMN process">
+        </div>
+
+        <div class = "list">
+            <ol class = "numbered">
+                <li>
+                    <h3>Obtain data</h3>
+                    <p>
+                        Data can be pre-collected, newly acquired, or obtained from a 
+                        data repository from the internet. Data scientists can extract 
+                        data from internal or external databases, company CRM software, 
+                        web server logs, social media, or by purchasing it from trusted 
+                        third-party sources.
+                    </p>
+                </li>
+                <li>
+                    <h3>Scrub data</h3>
+                    <p>
+                        Data scrubbing, or data cleaning, is the process of organizing the 
+                        data according to a predefined outline. The process of scrubbing 
+                        data includes handling missing data, fixing data errors, and 
+                        filtering out any data outliers. Some examples of data scrubbing are:
+                    </p>
+                    <ul>
+                        <li>Modifying all date values to adhere to a common standard format.</li>
+                        <li>Fixing spelling mistakes or extra spaces.</li>
+                        <li>Fixing mathematical errors or removing commas from large numbers.</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Explore data</h3>
+                    <p>
+                        Data exploration is preliminary data analysis used to prepare 
+                        subsequent data modeling tactics. Data scientists use descriptive 
+                        statistics and data visualization tools to get a basic understanding of 
+                        the data. After that, they review the data to find trends that can be 
+                        investigated or used.
+                    </p>
+                </li>
+                <li>
+                    <h3>Model data</h3>
+                    <p>
+                        Software and machine learning algorithms are used to prescribe the 
+                        optimum course of action, predict outcomes, and gain deeper insights. 
+                        The training data set is subjected to machine learning methods such as 
+                        clustering, classification, and association. To evaluate the correctness 
+                        of the results, the model may be validated against predefined test data. 
+                        To enhance the results, the data model can be adjusted numerous times.
+                    </p>
+                </li>
+                <li>
+                    <h3>Interpret results</h3>
+                    <p>
+                        Data scientists work together with analysts and businesses to use data 
+                        insights to make predictions, and evaluate the next course of action. 
+                        They make diagrams, graphs, and charts to represent trends and predictions. 
+                        Data summarization allows stakeholders to better understand and implement 
+                        results effectively.
+                    </p>
+                </li>
+            </ol>
+        </div>
+
+        <details>
+            <summary>Source:</summary>
+            <p><a href="https://aws.amazon.com/what-is/data-science/">https://aws.amazon.com/what-is/data-science/</a></p>
+        </details>
+
+        <%- include('partials/footer.ejs') %>
+    </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <%- include('partials/head.ejs') %>
+    <body>
+        <%- include('partials/nav.ejs') %>
+        
+        <article class = "centered">
+            <h2>Application of Data Science in Technology</h2>
+            <p>Data scientists work with complex technologies such as:</p>
+        </article>
+        <table>
+            <tr class = "hover_color">
+                <td><img class = "article_img" src = "img/tech_ai.png" alt = "Artificial Intelligence"></td>
+                <td>
+                    <h3>Artificial Intelligence</h3>
+                    <p>
+                        Machine learning models and related software are used 
+                        to perform predictive and prescriptive analyses
+                    </p>
+                </td>
+            </tr>
+            <tr class = "hover_color">
+                <td>
+                    <h3>Cloud Computing</h3>
+                    <p>
+                        Cloud technologies provide data scientists with the flexibility 
+                        and processing power they need to perform advanced data analytics.
+                    </p>
+                </td>
+                <td><img class = "article_img" src = "img/tech_cloud.png" alt = "Cloud Computing"></td>
+            </tr>
+            <tr class = "hover_color">
+                <td><img class = "article_img" src = "img/tech_iot.png" alt = "IoT Devices"></td>
+                <td>
+                    <h3>Internet of Things</h3>
+                    <p>
+                        <abbr title="Internet of Things">IoT</abbr> describes a variety of 
+                        gadgets that have the ability to automatically connect to the internet. 
+                        These gadgets accumulate information for data science projects. They produce 
+                        vast amounts of data that can be utilized for data extraction and mining.
+                    </p>
+                </td>
+            </tr>
+            <tr class = "hover_color">
+                <td>
+                    <h3>Quantum Computing</h3>
+                    <p>
+                        Complex computations are executed at high speeds by quantum computers. They are 
+                        used by skilled data scientists to create intricate quantitative algorithms.
+                    </p>
+                </td>
+                <td><img class = "article_img" src = "img/tech_quantum.png" alt = "Quantum Computing"></td>
+            </tr>
+        </table>
+
+        <details>
+            <summary>Source:</summary>
+            <p><a href="https://aws.amazon.com/what-is/data-science/">https://aws.amazon.com/what-is/data-science/</a></p>
+        </details>
+
+        <%- include('partials/footer.ejs') %>
+    </body>
+</html>

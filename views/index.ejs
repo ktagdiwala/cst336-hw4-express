@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <%- include('partials/head.ejs') %>
+    <body>
+        <%- include('partials/nav.ejs') %>
+        
+        <article class = "text_and_img">
+            <img class = "article_img" src="img/img1.png" alt = "Bar and line graph">
+            <div class = "section">
+                <h2>What is Data Science?</h2>
+                <p>
+                    Data science is the study of data to extract valuable insights from vast data sets.
+                    Data science requires an understanding of the practical application of several fields-
+                    including mathematics, statistics, artificial intelligence, and computer engineering- 
+                    to analyze large amounts of data. The results of these analyses allow data scientists 
+                    to recognize patterns in collected data and use those findings to make predictions about future data.
+                </p>
+                <p>
+                    Click on the tabs in the navigation bar to learn more about data science.
+                </p>
+            </div> 
+        </article>
+
+        <details>
+            <summary>Source:</summary>
+            <p><a href="https://aws.amazon.com/what-is/data-science/">https://aws.amazon.com/what-is/data-science/</a></p>
+        </details>
+
+        <%- include('partials/footer.ejs') %>
+    </body>
+</html>

@@ -1,26 +1,39 @@
 //event listeners
+// Allows user to send a message using the "enter" key
+document.querySelector("#userMessage").addEventListener("keypress", function(event){
+    if (event.key === "Enter") {
+        // Trigger the button element with a click
+        document.querySelector("#send").click();
+    }
+});
 document.querySelector("#send").addEventListener("click", sendMessage);
 
 //functions
 
 // Gets a response from the Gemini API when the user sends a message
 async function sendMessage(){
+    document.querySelector("#send").style.enabled = false;
     console.log("Inside sendMesssage...");
     let userMessage = document.querySelector("#userMessage").value;
     console.log("User Message: " + userMessage);
-    addUserMsg(userMessage);
     let feedback = document.querySelector("#msgFb");
     if(userMessage != ""){
+        // adds the userMessage to the chat history
+        addUserMsg(userMessage);
+        // clears the message input box
+        document.querySelector("#userMessage").value = "";
         feedback.innerHTML = "";
         // Retrieves a response from the API
         const response = await getResponse(userMessage);
         console.log("API Response: " + response.reply);
+        // display api response in chat history
         addApiResponse(response.reply);
     }else{
         // Sends feedback if message is empty
         feedback.innerHTML = "Please type a message to send";
         feedback.style.color="red";
     }
+    document.querySelector("#send").style.enabled = true;
 }
 
 // Handles the frontend API endpoint interaction with the backend
@@ -61,11 +74,16 @@ async function getResponse(userMessage){
 // adds the user message to the chat history
 function addUserMsg(message){
     console.log("adding user message...");
-    document.querySelector("#chatHistory").innerHTML += `<div><span class="request"> ${message} </span></div>`;
+    let chatHistory = document.querySelector("#chatHistory");
+    chatHistory.innerHTML += `<div class="request_box"><div class="request"> ${message} </div></div>`;
+    chatHistory.scrollTop = chatHistory.scrollHeight;
 }
 
 // adds the API response to the chat history
 function addApiResponse(message){
     console.log("adding response message...");
-    document.querySelector("#chatHistory").innerHTML += `<div><span class="request"> ${message} </span></div>`;
+    let chatHistory = document.querySelector("#chatHistory");
+    chatHistory.innerHTML += `<div class="response_box"> <img id="gemini_logo" src="/img/gemini_icon.png">
+    <div class="response">${message}</div> </div>`;
+    chatHistory.scrollTop = chatHistory.scrollHeight;
 }

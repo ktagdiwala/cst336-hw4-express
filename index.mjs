@@ -1,6 +1,4 @@
 import express from 'express';
-import fetch from 'node-fetch';
-import bodyParser from 'body-parser';
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import dotenv from 'dotenv';
 dotenv.config();
@@ -48,7 +46,6 @@ app.post("/aiapp", async (req,res)=> {
             },
          ],
          generationConfig: {
-            stopSequences: ["x"],
             maxOutputTokens: 100,
          },
       });

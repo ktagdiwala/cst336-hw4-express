@@ -220,15 +220,16 @@ td {
     margin: auto;
     background-color:#FDFFF5;
     color:#003d54;
+    border-radius: 10px;
 }
 
 #chatHistory {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
-    width: 50vh;
-    min-height: 70vh;
-    max-height: 70vh;
+    width: 70vh;
+    min-height: 50vh;
+    max-height: 50vh;
     padding: 20px;
     margin: auto;
     Overflow-y: scroll;
@@ -238,9 +239,10 @@ td {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: auto;
-    padding: 5px;
+    width: 100%;
+    padding-bottom: 5px;
     margin: auto;
+    border-radius: 10px;
 }
 
 input[type="text"]{
@@ -249,11 +251,49 @@ input[type="text"]{
     background-color:#003d54;
     color:#FDFFF5;
     text-align: left;
+    font-size: 1em;
+    width:80%;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 400;
+    padding: 5px;
+}
+
+#send {
+    font-size: 1.1em;
+    width: 10%;
+    font-family: "Josefin Slab", serif;
+    font-weight: 400;
+    padding: 5px 2px;
+    border-radius: 5px;
+    border: #003d54 solid;
+    background-color:#FDFFF5;
+    color:#003d54;
+}
+
+#send:hover{
+    background-color:#003d54;
+    color:#FDFFF5;
+    transition: 0.3s;
+}
+
+#send:enabled{
+    opacity: 100%;
+}
+
+#send:disabled{
+    opacity: 50%;
+}
+
+.request_box{
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 7px;
+    padding: 3px;
 }
 
 .request{
-    display: inline;
-    text-align: right;
+    display: flex;
+    justify-content: flex-end;
     border: #003049 2px solid;
     border-radius: 7px;
     background-color:#003d54;
@@ -261,22 +301,34 @@ input[type="text"]{
     padding: 5px;
     margin: 5px;
     font-family: "Josefin Sans", sans-serif;
-    font-weight: 300;
-    max-width: 70%;
+    font-weight: 400;
+}
+
+.response_box{
+    display: flex;
+    justify-content: left;
+    border-radius: 7px;
+    padding: 3px;
 }
 
 .response{
-    display: inline;
+    display: flex;
     justify-content: left;
-    text-align: left;
-    border: #003049 2px solid;
     border-radius: 7px;
+    border: #003049 2px solid;
     background-color:#FDFFF5;
     color:#003049;
     padding: 5px;
-    margin: 5px;
+    margin-left: 5px;
     font-family: "Josefin Sans", sans-serif;
-    font-weight: 300;
-    max-width: 70%;
+    font-weight: 400;
 }
 
+#gemini_logo{
+    height: 30px;
+    width: auto;
+    border: #003049 2px solid;
+    border-radius: 100%;
+    padding: 2px;
+    margin: 0px;
+}

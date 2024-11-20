@@ -3,11 +3,20 @@
     <%- include('partials/head.ejs') %>
     <body>
         <%- include('partials/nav.ejs') %>
-        
+        <article class = "text">
+            <h2>Chat With Google Gemini</h2>
+            <p>
+                Below is an example of an Artificial Intelligence application
+                which constantly uses data science behind the scenes.
+            </p>
+        </article>
 
         <div id="chatbox">
             <div id="chatHistory">
-                <div>Chat history...</div>
+                <div class="response_box"> 
+                    <img id="gemini_logo" src="/img/gemini_icon.png">
+                    <div class="response">Hello! I'm an AI assistant here to help you. You can ask me anything!</div> 
+                </div>
             </div>
             <div id="sendMessage" class="container">
                 <input id="userMessage" type="text" placeholder="Message Google Gemini">

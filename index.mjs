@@ -17,12 +17,13 @@ app.get('/', (req, res) => {
 
 // /* AIassistance route*/
 app.get('/aiapp', async (req, res) => {
-   let apiKey = process.env.API_KEY;
-   const genAI = new GoogleGenerativeAI(apiKey);
-   const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
-   const prompt = "Briefly introduce yourself as an AI assistant and ask me to ask you anything";
-   const result = await model.generateContent(prompt);
+   // let apiKey = process.env.API_KEY;
+   // const genAI = new GoogleGenerativeAI(apiKey);
+   // const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+   // const prompt = "Briefly introduce yourself as an AI assistant and ask me to ask you anything";
+   // const result = await model.generateContent(prompt);
    // console.log(result.response.text());
+   // res.render('aiapp', { currentPage: '/aiapp' });
    res.render('aiapp', { currentPage: '/aiapp' });
 });
 
@@ -78,6 +79,6 @@ app.get('/technologies', (req, res) => {
  });
 
 
-app.listen(3000, () => {
+app.listen(2999, () => {
    console.log('server started');
 });
